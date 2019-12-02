@@ -7,6 +7,12 @@ import Note from './components/Note'
 
 
 function App() {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+
   return (
     <div className="App">
       <Nav />
