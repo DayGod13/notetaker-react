@@ -6,21 +6,25 @@ import List from './components/List'
 import Note from './components/Note'
 
 
-function App() {
+class App extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      showNote: false
+    };
   }
+
+render () {
+  const { showNote } = this.state;
 
 
   return (
     <div className="App">
       <Nav />
-      <List />
-      <Note />
+      { showNote ? <Note /> : <List /> }
     </div>
   );
 }
-
+}
 
 export default App;
